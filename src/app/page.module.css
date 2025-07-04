@@ -154,3 +154,107 @@
     min-height: 56px;
   }
 }
+
+/* Facebook Animation */
+@keyframes facebookGlow {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(24, 119, 242, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(24, 119, 242, 0.6), 0 0 30px rgba(24, 119, 242, 0.4);
+  }
+}
+
+@keyframes facebookMove {
+  0%, 100% {
+    transform: translateY(-2px) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+/* Instagram Animation */
+@keyframes instagramGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes instagramGlow {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(220, 39, 67, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(220, 39, 67, 0.6), 0 0 30px rgba(240, 148, 51, 0.4);
+  }
+}
+
+/* TikTok Animation */
+@keyframes tiktokGlow {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes tiktokBounce {
+  0%, 100% {
+    transform: translateY(-2px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+}
+
+/* Apply animations to specific buttons - always active for mobile */
+.linkButton:nth-child(1) {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+  animation: facebookGlow 2s ease-in-out infinite, facebookMove 1.5s ease-in-out infinite;
+}
+
+.linkButton:nth-child(2) {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background-size: 200% 200%;
+  color: white;
+  border-color: transparent;
+  animation: instagramGradient 3s ease infinite, instagramGlow 2s ease-in-out infinite;
+}
+
+.linkButton:nth-child(3) {
+  background: #000000;
+  color: white;
+  border-color: #000000;
+  animation: tiktokGlow 2s ease-in-out infinite, tiktokBounce 1.2s ease-in-out infinite;
+}
+
+/* Enhanced hover effects for desktop */
+@media (hover: hover) {
+  .linkButton:nth-child(1):hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.8);
+  }
+
+  .linkButton:nth-child(2):hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(220, 39, 67, 0.8);
+  }
+
+  .linkButton:nth-child(3):hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  }
+}
