@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>Bienvenue à Lellehom Store</h1>
+          <h1 className={styles.title}>Bienvenue chez Lellehom Store !</h1>
         </div>
 
         <div className={styles.linksContainer}>

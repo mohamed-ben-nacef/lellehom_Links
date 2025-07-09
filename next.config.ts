@@ -2,11 +2,13 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  assetPrefix: '',
+  basePath: '',
   images: {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: 'http',
         hostname: 'res.cloudinary.com',
         port: '',
         pathname: '/**',
