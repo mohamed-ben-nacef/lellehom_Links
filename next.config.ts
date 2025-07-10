@@ -2,8 +2,11 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  assetPrefix: '',
-  basePath: '',
+  // Add these new configurations:
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  productionBrowserSourceMaps: true,
+  
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -15,6 +18,12 @@ const nextConfig = {
       },
     ],
   },
+  
+  // Add experimental flags for better static export
+  experimental: {
+    scrollRestoration: true,
+    legacyBrowsers: false,
+  }
 }
 
 module.exports = nextConfig
