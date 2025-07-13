@@ -4,7 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   assetPrefix: '',
   basePath: '',
-  
+
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -16,7 +16,7 @@ const nextConfig = {
       },
     ],
   },
-  
+
   experimental: {
     scrollRestoration: true
   }

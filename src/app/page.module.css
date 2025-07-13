@@ -14,7 +14,23 @@
   padding: 40px 20px;
   gap: 32px;
   font-family: var(--font-geist-sans);
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(270deg, #f5f7fa, #c3cfe2, #f5f7fa, #c3cfe2);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -157,18 +173,24 @@
 
 /* Facebook Animation */
 @keyframes facebookGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 4px 16px rgba(24, 119, 242, 0.3);
   }
+
   50% {
     box-shadow: 0 4px 20px rgba(24, 119, 242, 0.6), 0 0 30px rgba(24, 119, 242, 0.4);
   }
 }
 
 @keyframes facebookMove {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-2px) scale(1);
   }
+
   50% {
     transform: translateY(-4px) scale(1.02);
   }
@@ -179,18 +201,23 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 @keyframes instagramGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 4px 16px rgba(220, 39, 67, 0.3);
   }
+
   50% {
     box-shadow: 0 4px 20px rgba(220, 39, 67, 0.6), 0 0 30px rgba(240, 148, 51, 0.4);
   }
@@ -198,21 +225,28 @@
 
 /* TikTok Animation */
 @keyframes tiktokGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   }
+
   50% {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
 
 @keyframes tiktokBounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-2px) rotate(0deg);
   }
+
   25% {
     transform: translateY(-4px) rotate(1deg);
   }
+
   75% {
     transform: translateY(-3px) rotate(-1deg);
   }
